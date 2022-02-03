@@ -1,0 +1,23 @@
+@font-face {
+               font-family: "sahel";
+               src: url('../fonts/sahel/Sahel.eot?#') format('eot'),
+               url('../fonts/sahel/Sahel.ttf') format('truetype'),
+               url('../fonts/sahel/Sahel.woff') format('woff');
+          }
+
+          body{
+                         direction: rtl;
+                         text-align: right !important;
+                         font-family: "sahel" !important;
+                         line-height: 1.6;
+
+          }
+          .height100{
+               height:700px;
+          }
+        
+       
+          input{
+               padding-top: 5px;
+          }
+         
