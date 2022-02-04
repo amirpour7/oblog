@@ -100,10 +100,24 @@ if(isset($_POST['edit-settings'])){
 
  $ver = file_get_contents('./version.txt');
 
- $verall = file_get_contents("https://drive.google.com/uc?export=view&id=1GotcLq0ztno-3Uulz2LBZaiqqv7kIHzn");
+ try {
+   
+$verall = file_get_contents("https://drive.google.com/uc?export=view&id=1GotcLq0ztno-3Uulz2LBZaiqqv7kIHzn");
+
+ } catch (\Throwable $th) {
+   
+  die('مشکلی در درخواست به سرور لطفا دسترسی به اینترنت را چک کرده و صفحه را رفرش کنید.');
+
+ }
+
+ try {
+   $beta = file_get_contents('https://drive.google.com/uc?export=view&id=1ihxcmaUuDXfwMPEbJ8K9P1ibfoic35dL');
+ } catch (\Throwable $th) {
+  die('مشکلی در درخواست به سرور لطفا دسترسی به اینترنت را چک کرده و صفحه را رفرش کنید.');
+ }
 
 
-$beta = file_get_contents('https://drive.google.com/uc?export=view&id=1ihxcmaUuDXfwMPEbJ8K9P1ibfoic35dL');
+
 
 
   
