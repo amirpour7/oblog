@@ -78,9 +78,9 @@ CREATE TABLE `information` (
 --
 
 INSERT INTO `information` (`id`, `body`) VALUES
-(1, '<p>سایت امیررضا قابلیت های مختلفی از جمله آزمون ساز و ...دارد و این وبلاگ امیررضا است.</p>'),
-(2, '<p>تهیه شده توسط امیررضا پورذوالفقاری</p><p>CopyRight 2020 <a href=\"https://amir-pour-azmoon.ir\">amirreza</a></p>'),
-(3, '3.5'),
+(1, '<p>شما در حال استفاده از سیستم oblog ورژن 3 هستید.</p>'),
+(2, '<p>تهیه شده توسط امیررضا پورذوالفقاری</p><p>CopyRight 2022 amirreza</p>'),
+(3, '3.6.1'),
 (4, 'oblog'),
 (5, 'مدیریت oblog'),
 (6 , 1);
