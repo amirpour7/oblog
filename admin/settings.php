@@ -99,10 +99,17 @@ if(isset($_POST['edit-settings'])){
  }
 
  $ver = file_get_contents('./version.txt');
+$context = stream_context_create(
+  array(
+      "http" => array(
+          "header" => "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+      )
+  )
+);
 
  try {
    
-$verall = file_get_contents("https://drive.google.com/uc?export=view&id=1GotcLq0ztno-3Uulz2LBZaiqqv7kIHzn");
+$verall = file_get_contents("https://drive.google.com/uc?export=view&id=1GotcLq0ztno-3Uulz2LBZaiqqv7kIHzn", false, $context);
 
  } catch (\Throwable $th) {
    
@@ -111,12 +118,13 @@ $verall = file_get_contents("https://drive.google.com/uc?export=view&id=1GotcLq0
  }
 
  try {
-   $beta = file_get_contents('https://drive.google.com/uc?export=view&id=1ihxcmaUuDXfwMPEbJ8K9P1ibfoic35dL');
+   $beta = file_get_contents('https://drive.google.com/uc?export=view&id=1ihxcmaUuDXfwMPEbJ8K9P1ibfoic35dL', false, $context);
  } catch (\Throwable $th) {
   die('مشکلی در درخواست به سرور لطفا دسترسی به اینترنت را چک کرده و صفحه را رفرش کنید.');
  }
 
 
+ 
 
 
 
