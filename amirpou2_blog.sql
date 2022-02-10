@@ -80,7 +80,7 @@ CREATE TABLE `information` (
 INSERT INTO `information` (`id`, `body`) VALUES
 (1, '<p>شما در حال استفاده از سیستم oblog ورژن 3 هستید.</p>'),
 (2, '<p>تهیه شده توسط امیررضا پورذوالفقاری</p><p>CopyRight 2022 amirreza</p>'),
-(3, '3.6.1'),
+(3, '3.6.2'),
 (4, 'oblog'),
 (5, 'مدیریت oblog'),
 (6 , 1);
