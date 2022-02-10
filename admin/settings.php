@@ -99,57 +99,24 @@ if(isset($_POST['edit-settings'])){
  }
 
  $ver = file_get_contents('./version.txt');
-$context = stream_context_create(
-  array(
-      "http" => array(
-          "header" => "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
-      )
-  )
-);
-
- try {
-   
-$verall = file_get_contents("https://drive.google.com/uc?export=view&id=1GotcLq0ztno-3Uulz2LBZaiqqv7kIHzn", false, $context);
-
- } catch (\Throwable $th) {
-   
-  die('مشکلی در درخواست به سرور لطفا دسترسی به اینترنت را چک کرده و صفحه را رفرش کنید.');
-
- }
-
- try {
-   $beta = file_get_contents('https://drive.google.com/uc?export=view&id=1ihxcmaUuDXfwMPEbJ8K9P1ibfoic35dL', false, $context);
- } catch (\Throwable $th) {
-  die('مشکلی در درخواست به سرور لطفا دسترسی به اینترنت را چک کرده و صفحه را رفرش کنید.');
- }
 
 
  
-
+?>
 
 
   
  
- if($ver== $verall){
-    ?>
+ 
 <div class="alert alert-success" role="alert">
-  شما جدیدترین ورژن را دارید. 
+  لطفا ورژن خود را با ورژن جدید در github و تلگرام چک کنید و همیشه هم آپدیت کنید.
   <br>
   ورژن شما <?php echo $ver; ?>
-  <br>
-  آخرین نسخه بتا : <?php echo $beta;?>
+
 </div>
-    <?php
- }else{
-   ?>
-<div class="alert alert-danger" role="alert">
-    ورژن شما قدیمی است. لطفا با مراجعه به گیت هاب آپدیت کنید.<br> ورژن فعلی : <?php echo $ver; ?> <br> ورژن جدید: <?php echo $verall ; ?>
-  <br>
-  آخرین نسخه بتا : <?php echo $beta;?>
-</div>
-   <?php
- }
-?>
+ 
+
+ 
 
 <div class="alert alert-primary" role="alert">
 <div class="text-center">
