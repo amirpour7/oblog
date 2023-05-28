@@ -10,6 +10,7 @@ last version : 3.6.2
 documention soon ....
 
 اگر تلگرام ندارید برای دانلود فایل ها از لینک های زیر استفاده کنید.
+آدرس اصلی وبسایت  و نسخه دمو  : https://oblog.aroms.ir/ #
 
 oblog 1 
 https://s20.picofile.com/d/8446965776/26fa223e-cd77-40d1-a2b0-36240a6304de/Oblog_v1.zip
